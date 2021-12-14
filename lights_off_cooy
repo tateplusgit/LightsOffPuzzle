@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script>
+function toggle(i,j) {
+      b=document.getElementById("but_" + i + j);
+      t = b.innerHTML;
+      if (t=="X") {b.innerHTML = "O";
+                   b.setAttribute("style", "color:green; background-color:white");
+                  }
+      if (t=="O") {b.innerHTML = "X";
+                   b.setAttribute("style", "color:white; background-color:black");
+                  }
+	
+	
+	
+}
+
+// Please complete this function
+/*function press(i,j) {
+	  b=document.getElementById("but_" + i + j);
+      t = b.innerHTML;
+      if (t=="X") {//b.innerHTML = "O";
+                   //b.setAttribute("style", "color:green; background-color:white");
+				   //toggle(1,2),toggle(2,1),toggle(3,2),toggle(2,3),toggle(2,2)
+		  			press(3,2)
+                  }
+      if (t=="O") {//b.innerHTML = "X";
+                   //b.setAttribute("style", "color:white; background-color:black");
+				   //toggle(1,2),toggle(2,1),toggle(3,2),toggle(2,3),toggle(2,2)
+				   //toggle(1,2),toggle(2,1),toggle(3,2),toggle(2,3)
+                  }*/
+	function press(i,j) {
+		
+	  b=document.getElementById("but_02");
+		b=document.getElementById("but_22");
+	  //var allbtn = document.getElementById("but_" + i + j);
+	  var btn00 = document.getElementById("but_00");
+		var btn01 = document.getElementById("but_01");
+		var btn02 = document.getElementById("but_02");
+		var btn03 = document.getElementById("but_03");
+		var btn04 = document.getElementById("but_04");
+		var btn10 = document.getElementById("but_10");
+		var btn11 = document.getElementById("but_11");
+		var btn12 = document.getElementById("but_12");
+		var btn13 = document.getElementById("but_13");
+		var btn14 = document.getElementById("but_14");
+		var btn20 = document.getElementById("but_20");
+		var btn21 = document.getElementById("but_21");
+		var btn22 = document.getElementById("but_22");
+		var btn23 = document.getElementById("but_23");
+		var btn24 = document.getElementById("but_24");
+		var btn30 = document.getElementById("but_30");
+		var btn31 = document.getElementById("but_31");
+		var btn32 = document.getElementById("but_32");
+		var btn33 = document.getElementById("but_33");
+		var btn34 = document.getElementById("but_34");
+		var btn40 = document.getElementById("but_40");
+		var btn41 = document.getElementById("but_41");
+		var btn42 = document.getElementById("but_42");
+		var btn43 = document.getElementById("but_43");
+		var btn44 = document.getElementById("but_44");
+      t = b.innerHTML;
+      if (t=="X") {//b.innerHTML = "O";
+                   //b.setAttribute("style", "color:green; background-color:white");
+				   toggle(1,2),toggle(2,1),toggle(3,2),toggle(2,3),toggle(2,2)
+		  		   //alert ("Hello World!");
+		 		   /*btn00.disabled = true;
+		 		   btn01.disabled = true;
+		 		   btn02.disabled = false;
+		 		   btn03.disabled = true;
+		 		   btn04.disabled = true;
+		 		   btn10.disabled = true;
+		 		   btn11.disabled = true;
+		 		   btn12.disabled = true;
+		 		   btn13.disabled = true;
+		 		   btn14.disabled = true;
+		 		   btn20.disabled = true;
+		 		   btn21.disabled = true;
+		 		   btn22.disabled = false;
+		 		   btn23.disabled = true;
+		 		   btn24.disabled = true;
+		 		   btn30.disabled = true;
+		 		   btn31.disabled = true;
+		 		   btn32.disabled = true;
+		 		   btn33.disabled = true;
+		 		   btn34.disabled = true;
+		 		   btn40.disabled = true;
+		 		   btn41.disabled = true;
+		 		   btn42.disabled = true;
+		 		   btn43.disabled = true;
+		 		   btn44.disabled = true;*/
+		  
+                   btn21.innerText = 'X'
+                  }
+      if (t=="O") {//b.innerHTML = "X";
+                   //b.setAttribute("style", "color:white; background-color:black");
+				   toggle(1,2),toggle(2,1),toggle(3,2),toggle(2,3),toggle(2,2)
+				   //toggle(1,2),toggle(2,1),toggle(3,2),toggle(2,3)
+                  }
+	
+	btn00.addEventListener("click", otherButtons);
+	btn01.addEventListener("click", otherButtons);  
+	btn02.addEventListener("click", btn02Click);
+	btn03.addEventListener("click", otherButtons);
+	btn04.addEventListener("click", otherButtons); 
+	btn10.addEventListener("click", otherButtons);
+	btn11.addEventListener("click", otherButtons);  
+	btn12.addEventListener("click", otherButtons);
+	btn13.addEventListener("click", otherButtons);  
+	btn14.addEventListener("click", otherButtons); 
+	btn20.addEventListener("click", otherButtons);
+	btn21.addEventListener("click", otherButtons);  
+	//btn22.addEventListener("click", otherButtons);
+	btn23.addEventListener("click", otherButtons);  
+	btn24.addEventListener("click", otherButtons); 
+	btn30.addEventListener("click", otherButtons);
+	btn31.addEventListener("click", otherButtons);  
+	btn32.addEventListener("click", otherButtons);
+	btn33.addEventListener("click", otherButtons);  
+	btn34.addEventListener("click", otherButtons); 
+	btn40.addEventListener("click", otherButtons);
+	btn41.addEventListener("click", otherButtons);  
+	btn42.addEventListener("click", otherButtons);
+	btn43.addEventListener("click", otherButtons);  
+	btn44.addEventListener("click", otherButtons);
+		
+	  //b=document.getElementById("but_02");
+      //t = b.innerHTML;
+     /*if (t=="X") {b.innerHTML = "O";
+                   b.setAttribute("style", "color:green; background-color:white");
+				   toggle(0,1),toggle(0,3),toggle(1,2),toggle(2,1),toggle(3,2),toggle(2,3)
+				   //toggle(2,2)
+				   //press(1,2),press(2,1),press(3,2),press(2,3)
+                  }
+      if (t=="O") {b.innerHTML = "X";
+                   b.setAttribute("style", "color:white; background-color:black");
+                  }
+	/*b=document.getElementById("but_12");
+      t = b.innerHTML;
+      if (t=="X") {b.innerHTML = "O";
+                   b.setAttribute("style", "color:green; background-color:white");
+				   //press(1,2),press(2,1),press(3,2),press(2,3)
+                  }
+      if (t=="O") {b.innerHTML = "X";
+                   b.setAttribute("style", "color:white; background-color:black");
+                  }
+	b=document.getElementById("but_21");
+      t = b.innerHTML;
+      if (t=="X") {b.innerHTML = "O";
+                   b.setAttribute("style", "color:green; background-color:white");
+				   //press(1,2),press(2,1),press(3,2),press(2,3)
+                  }
+      if (t=="O") {b.innerHTML = "X";
+                   b.setAttribute("style", "color:white; background-color:black");
+                  }
+	b=document.getElementById("but_32");
+      t = b.innerHTML;
+      if (t=="X") {b.innerHTML = "O";
+                   b.setAttribute("style", "color:green; background-color:white");
+				   //press(1,2),press(2,1),press(3,2),press(2,3)
+                  }
+      if (t=="O") {b.innerHTML = "X";
+                   b.setAttribute("style", "color:white; background-color:black");
+                  }
+	b=document.getElementById("but_23");
+      t = b.innerHTML;
+      if (t=="X") {b.innerHTML = "O";
+                   b.setAttribute("style", "color:green; background-color:white");
+				   //press(1,2),press(2,1),press(3,2),press(2,3)
+                  }
+      if (t=="O") {b.innerHTML = "X";
+                   b.setAttribute("style", "color:white; background-color:black");
+                  }*/
+	//toggle(i,j);
+	
+}
+	
+function btn02Click(){
+	
+	//alert ("Hello World!");
+	press(1,2)
+	b=document.getElementById("but_02");
+	var btn02 = document.getElementById("but_02");
+  //var allbtn = document.getElementById("but_" + i + j);
+	  
+      t = b.innerHTML;
+      if (t=="X") {//b.innerHTML = "O";
+                   //b.setAttribute("style", "color:green; background-color:white");
+				   toggle(0,1),toggle(1,2),toggle(0,3)
+                   btn02.innerText = 'X'
+                  }
+      if (t=="O") {//b.innerHTML = "X";
+                   //b.setAttribute("style", "color:white; background-color:black");
+				   //toggle(1,2),toggle(2,1),toggle(3,2),toggle(2,3),toggle(2,2)
+				   //toggle(1,2),toggle(2,1),toggle(3,2),toggle(2,3)
+		           toggle(0,1),toggle(1,2),toggle(0,3)
+                  }
+	
+	
+}
+	
+function otherButtons(){
+	
+	
+	press(1,2)
+}
+
+
+// Please complete this function
+function checkAllOff(){ 
+	var btn00 = document.getElementById("but_00");
+		var btn01 = document.getElementById("but_01");
+		var btn02 = document.getElementById("but_02");
+		var btn03 = document.getElementById("but_03");
+		var btn04 = document.getElementById("but_04");
+		var btn10 = document.getElementById("but_10");
+		var btn11 = document.getElementById("but_11");
+		var btn12 = document.getElementById("but_12");
+		var btn13 = document.getElementById("but_13");
+		var btn14 = document.getElementById("but_14");
+		var btn20 = document.getElementById("but_20");
+		var btn21 = document.getElementById("but_21");
+		var btn22 = document.getElementById("but_22");
+		var btn23 = document.getElementById("but_23");
+		var btn24 = document.getElementById("but_24");
+		var btn30 = document.getElementById("but_30");
+		var btn31 = document.getElementById("but_31");
+		var btn32 = document.getElementById("but_32");
+		var btn33 = document.getElementById("but_33");
+		var btn34 = document.getElementById("but_34");
+		var btn40 = document.getElementById("but_40");
+		var btn41 = document.getElementById("but_41");
+		var btn42 = document.getElementById("but_42");
+		var btn43 = document.getElementById("but_43");
+		var btn44 = document.getElementById("but_44");
+	if (btn22.bgColor ==  "black") {
+	//document.getElementById("demo").innerHTML = "Congratulations! All lights out!";
+	document.getElementById("end").innerHTML = "Found X!";
+ //alert("Found X!");
+ //capturePhoto();
+} else {
+		document.getElementById("end").innerHTML = "Did not find X!";
+  //alert("Did not find X!");
+}
+}
+
+
+// Please complete this function
+function resetGrid(){
+}
+
+// 
+function generateGrid() {
+        var d = document.getElementById("button-grid");
+        var table = document.createElement("table");
+        d.appendChild(table);
+        for (var i = 0; i < 5; i++) {
+                var row = document.createElement("tr");
+                for (var j = 0; j < 5; j++) {
+                        var cell = document.createElement("td");
+                        cell.innerHTML = "<button type=button id=but_" + i + j +
+                                         " onclick=\"press(" +i + ',' +j + ")\"" + 
+							             //" onclick=\"press(2,2)\"" + 
+                                         " style=\"color:green; background-color:white\"" +
+                                         ">O</button>" ;
+                        row.appendChild(cell);
+					
+                }
+                table.appendChild(row);
+        }
+        toggle(2,2) // initial state
+}
+
+window.onload = function() {
+        generateGrid();
+};
+
+</script> 
+
+<title>Lights Off Puzzle</title>
+</head> 
+
+<body>
+<h1>5x5 Lights off Puzzle</h1>
+<p>Click on buttons until they all turn black. When a button is pressed, the buttons above, below, left and right of the button pressed are also toggled. </p>
+<div id="button-grid"></div>
+<h2 id="end" style="color:green"></h2>
+<div id="resetbutton">
+<button type="button" id="reset" onclick="resetGrid()">Reset</button>
+<button type="button" id="check" onclick="checkAllOff()">Check</button>
+</div>
+
+
+</body>
+
+</html>
